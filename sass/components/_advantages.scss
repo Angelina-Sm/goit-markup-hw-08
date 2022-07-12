@@ -1,0 +1,46 @@
+.advantages {
+    padding-top: 94px;
+}
+
+.icon-list__vector {
+    Width:270px;
+    Height:120px;
+    background-color: var(--btn-background);
+    border-radius: 4px;
+    padding: 25px auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    & + & {
+        margin-left: 30px;
+    }
+}
+
+.item_vector {
+    margin-bottom: 30px;
+}
+
+.icon-list {
+    display: flex;
+}
+
+.icon-list__item + .icon-list__item {
+    margin-left: 30px;
+}
+
+.icon-list__subtitle {
+    @include font($fw:700);
+    text-transform: uppercase;
+    color: var(--subtitle);
+    max-width: 270px;
+}
+
+.subtitle__item {
+    margin-bottom: 10px;
+}
+
+.icon-list__description {
+    @include font(nul, $lh:1.71);
+    color: var(--description);
+    max-width: 270px;
+}

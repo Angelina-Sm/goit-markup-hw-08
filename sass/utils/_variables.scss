@@ -1,0 +1,47 @@
+:root {
+    --title-color: #FFFFFF;
+    --background-title: #2F303A;
+    --header-link-color: #212121;
+    --contakt-header: #757575;
+    --akcent-color: #2196F3;
+    --heading: #212121;
+    --subtitle: #212121;
+    --description: #757575;
+    --footer-text: #FFFFFF;
+    --footer-background: #2F303A;
+    --footer-contakt: rgba(255, 255, 255, 0.6);
+    --btn-color: #212121;
+    --btn-background: #F5F4FA;
+    --btn-hover-background: #2196F3;
+    --typical-margin: 10px;
+    --icon-color: #AFB1B8;
+    --modal-tex:#757575;
+    --modal-icon-color: #212121;
+    --icon-hover: #FFFFFF;
+    --input-btn-hover:#188CE8;
+}
+$title-color: #FFFFFF;
+$background-title: #2F303A;
+$header-link-color: #212121;
+$contakt-header: #757575;
+$akcent-color: #2196F3;
+$heading: #212121;
+$subtitle: #212121;
+$description: #757575;
+$footer-text: #FFFFFF;
+$footer-contakt: rgba(255, 255, 255, 0.6);
+$btn-color: #212121;
+$btn-background: #F5F4FA;
+$btn-hover-background: #2196F3;
+$typical-margin: 10px;
+$icon-color: #AFB1B8;
+$modal-tex:#757575;
+$icon-hover: #FFFFFF;
+$input-btn-hover:#188CE8;
+
+@mixin font($fw:500, $fs:14px, $lh:1.14, $ls:0.03em) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+}

@@ -1,0 +1,212 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 528px;
+    height: 581px;
+    background: var(--title-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+    position: fixed;
+    
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--title-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-modal-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal-close-btn:hover & {
+        fill: var(--akcent-color);
+    }
+    .modal-close-btn:focus & {
+        fill: var(--akcent-color);
+    }
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-title {
+    @include font (700, 20px, 1.15);
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--subtitle);
+}
+
+.modal-label {
+    @include font(null, 12px, 1.17, 0.01em);
+    display: flex;
+    flex-direction: column;
+    color: var(--modal-tex);
+    
+}
+
+.modal-block {
+    margin-bottom: 10px;
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.modal-input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--modal-icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal-input:hover + & {
+        fill: var(--akcent-color);
+    }
+    .modal-input:focus + & {
+        fill: var(--akcent-color);
+    }
+}
+
+.modal-input {
+    margin-top: 4px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    outline: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--akcent-color);
+    }
+}
+
+.modal-comment {
+    margin-bottom: 17px;
+}
+
+.comment-label {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--modal-tex);
+    
+}
+
+.comment-text {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    resize: none;
+    padding: 12px 16px;
+    outline: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--akcent-color);
+    }
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.checkbox-privasy {
+    margin-bottom: 30px;
+}
+
+.checkbox-text {
+    @include font(null, $lh:1.71);
+    color: var(--modal-tex);
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-text span {
+    Width:16px;
+    Height:15px;
+    border: 2px solid var(--modal-icon-color);
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .input-checkbox:checked + & {
+        background-color: var(--akcent-color);
+        border: none;
+    }
+}
+
+.icon-checkbox {
+    fill: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .input-checkbox:checked + .checkbox-text &{
+        fill: var(--title-color);
+    }
+}
+
+.modal-link {
+    color: var(--akcent-color);
+}
+
+
+.modal-btn {
+    font-family: inherit;
+    @include font(700, 16px, 1.88, 0.06em);
+    padding: 10px 55px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: var(--title-color);
+    background: var(--akcent-color);
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        background:var(--btn-hover-background);
+    }
+    &:focus {
+        background: var(--btn-hover-background);
+    }
+}
+
+
