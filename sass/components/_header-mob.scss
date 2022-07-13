@@ -1,0 +1,18 @@
+.header-mob {
+    border-bottom: 1px solid #ECECEC;
+    padding: 16px 15px;
+    @media screen and (min-width:767px){
+        display: none;
+    }
+
+}
+
+.header-mob-logo-part1 {
+    @include font(400, 24px, 1.17);
+    color: var(--akcent-color);
+    font-family: 'Raleway';
+}
+
+.header-mob-logo-part2 {
+    color: var(--header-link-color);
+}

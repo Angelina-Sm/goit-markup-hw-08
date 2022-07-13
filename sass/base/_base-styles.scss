@@ -62,4 +62,7 @@ img {
 }
 .section {
     padding-bottom: 94px;
+    @media screen and (max-width: 1199px){
+        padding-bottom: 60px;
+    }
 }
