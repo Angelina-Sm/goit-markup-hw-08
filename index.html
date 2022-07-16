@@ -130,10 +130,23 @@
                     <li class="team-item">
                         <picture>
                             <source srcset="
-                            ./"
+                            ./images/img2.1.jpg 1x,
+                            ./images/des-img-1-2x.jpg 2x"
+                            @media="(min-width: 1200px)"
                             >
+                            <source srcset="
+                            ./images/time-img-tab1.jpg 1x,
+                            ./images/time-img-tab1-2x.jpg 2x"
+                            @media="(min-width: 768px)"
+                            >
+                            <source srcset="
+                            ./images/time-img-mob1.jpg 1x,
+                            ./images/time-img-mob1-2x.jpg 2x"
+                            @media="(min-width: 480px)"
+                            >
+                            <img src="./images/time-img-mob1.jpg" alt="Дизайнер" width="270">
                         </picture>
-                        <img src="./images/img2.1.jpg" alt="Дизайнер" width="270">
+                        
                         <div class="team-specialist">
                             <h3 class="team-subtitle">Игорь Демьяненко</h3>
                             <p class="team-description">Product Designer</p>
