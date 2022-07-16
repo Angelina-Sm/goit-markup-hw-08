@@ -1,10 +1,25 @@
 .main-portfolio {
-    padding-top: 94px;
+    // padding-top: 94px;
+    padding-top: 60px;
+    @media screen and (min-width:1200px){
+        padding-top: 94px;
+    }
 }
+
 .main-portfolio-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    // justify-content: center;
+    // margin-bottom: 50px;
+    margin-bottom: 40px;
+    @media screen and (min-width:768px){
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    @media screen and (min-width:1200px){
+        margin-bottom: 50px;
+        justify-content: center;
+    }
 }
 
 .main-portfolio-btn {
@@ -39,18 +54,30 @@
     margin-right: 8px;
 }
 
+.main-portfolio-item {
+    margin-top: 15px;
+
+}
+
 .portfolio-list-blok {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-bottom: -30px;
+    gap: 30px;
+    // margin-left: -30px;
+    // margin-bottom: -30px;
 }
 
 .portfolio-item {
-    flex-basis: calc((100% - 90px) / 3);
-    margin-left: 30px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
+    @media screen and (min-width:768px){
+        flex-basis: calc((100% - 60px) / 2);
+    }
+    @media screen and (min-width:1200px){
+        flex-basis: calc((100% - 90px) / 3);
+    }
+    // flex-basis: calc((100% - 90px) / 3);
+    // margin-left: 30px;
+    // margin-bottom: 30px;
+    // box-sizing: border-box;
 }
 
 .portfolio-img-hover {
@@ -101,8 +128,6 @@
 }
 
 .portfolio-description {
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
+    @include font(400, 16px, 1,88);
     color: var(--description);
 }
