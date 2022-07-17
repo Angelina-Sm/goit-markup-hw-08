@@ -905,12 +905,12 @@ img {
   text-align: center;
 }
 .footer .container {
-  display: flex;
   align-items: baseline;
 }
 @media screen and (min-width: 1200px) {
   .footer {
     text-align: left;
+    display: flex;
   }
 }
 
@@ -1305,7 +1305,6 @@ img {
 .header-mob {
   border-bottom: 1px solid #ECECEC;
   padding: 16px 15px;
-  z-index: 10000;
 }
 @media screen and (min-width: 767px) {
   .header-mob {
@@ -1357,6 +1356,7 @@ img {
   height: 100%;
   padding-top: 21px;
   padding-bottom: 21px;
+  z-index: 2;
 }
 .mob-menu-open .container {
   display: flex;
