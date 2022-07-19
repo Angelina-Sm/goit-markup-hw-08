@@ -53,6 +53,11 @@
     text-transform: uppercase;
     color: var(--subtitle);
     max-width: 270px;
+    text-align: center;
+    @media screen and (min-width:768px){
+        text-align: left;
+        
+    }
 }
 
 .subtitle__item {

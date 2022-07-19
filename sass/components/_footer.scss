@@ -161,10 +161,13 @@
 }
 
 .footer-notifications {
-    margin-top: 60px;
-    @media screen and (min-width:1200px){
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        margin-top: 60px;
+    }
+    
+    @media screen and (min-width: 1200px) {
         margin-left: 93px;
-        margin-top: 0;
+        
     }
 }
 
@@ -173,9 +176,7 @@
     text-transform: uppercase;
     color: var(--title-color);
     margin-bottom: 20px;
-    @media screen and (min-width:768px){
-        margin-top: 60px;
-    }
+    
 }
 
 .notifications-input {

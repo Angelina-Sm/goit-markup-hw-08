@@ -46,6 +46,7 @@
     @media screen and (min-width:1200px){
         display: flex;
         margin-left: auto;
+        align-items: center;
     }
     
 }
@@ -124,6 +125,10 @@
     &:focus {
         color: var(--akcent-color);
     }
+    @media screen and (min-width:1200px){
+        margin-bottom: 0;
+    }
+    
 }
 
 .header-link-tel {

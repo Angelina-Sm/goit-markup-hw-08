@@ -1,15 +1,11 @@
 .header-mob {
     border-bottom: 1px solid #ECECEC;
     padding: 16px 15px;
-    @media screen and (min-width:767px){
+    @media screen and (min-width:768px){
         display: none;
     }
 
 
-}
-
-.current-mob {
-    color: var(--akcent-color);
 }
 
 .mob {
@@ -35,7 +31,7 @@
     background-color: transparent;
     margin-left: auto;
 }
-.header-soc-icon {
+.header-mob-btn-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: var(--header-link-color);
     &:hover,
@@ -102,6 +98,10 @@
 
 }
 
+.current-mob {
+    color: var(--akcent-color);
+}
+
 .header-mob-menu-list-contakt {
     margin-top: 100px
 }
@@ -119,6 +119,9 @@
 .header-mob-menu-soc-list {
     margin-top: 64px;
     display: flex;
+    flex-wrap: wrap;
+    width: min-content
+    
     
 }
 
